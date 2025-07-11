@@ -1,0 +1,275 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block main-content %}
+
+<!-- Carousel -->
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" style="background-color: black; height: 16px; width: 16px; border-radius: 50%;"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" style="background-color: black; height: 16px; width: 16px; border-radius: 50%;"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" style="background-color: black; height: 16px; width: 16px; border-radius: 50%;"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="row" style="height:700px;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container mt-3">
+                    <img src="{% static 'Resources/Model.png' %}" alt="Model" class="mx-auto d-block" style="width:75%;">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container mt-3 text-center">
+                    <img src="{% static 'Resources/Star.png' %}" alt="Star" class="mx-auto d-block" style="width:60%; max-width:100%;">
+                    <button type="button" class="btn btn-primary">
+                        <a href="/EOB/Member" style="color:white;"> Đăng ký </a>
+                    </button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container mt-3 text-center">
+                    <img src="{% static 'Resources/Product.png' %}" alt="Product" class="mx-auto d-block" style="width:60%; max-width:100%;">
+                    <button type="button" class="btn btn-primary">
+                        <a href="/EOB/VLXD" style="color:white;"> Đăng ký </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Các công ty -->
+<div class="row res_comp" style="background-color:#f0f0f0;">
+    <div class="homepage-carousel-container">
+        <div id="homepage-carousel" class="owl-carousel owl-theme">
+            <div class="item">
+                <a href="https://australu.com/">
+                    <img src="{% static 'Resources/Austra.png' %}" alt="Austraalu" width="170" height="70">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://www.dulux.vn/">
+                    <img src="{% static 'Resources/Dulux.png' %}" alt="Dulux" width="110" height="40">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://phuongnampanel.com/">
+                    <img src="{% static 'Resources/PNP.png' %}" alt="Phương Nam Panel" width="110" height="40">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://australu.com/">
+                    <img src="{% static 'Resources/Austra.png' %}" alt="Austraalu" width="170" height="70">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://www.dulux.vn/">
+                    <img src="{% static 'Resources/Dulux.png' %}" alt="Dulux" width="110" height="40">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://phuongnampanel.com/">
+                    <img src="{% static 'Resources/PNP.png' %}" alt="Phương Nam Panel" width="110" height="40">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bốn tấm hình -->
+<div class="res_post container-fluid" style="padding: 75px 100px 0 200px;">
+  <div class="row" style="padding-bottom: 50px;">
+      <!-- Tấm hình đầu tiên -->
+      <div class="col d-flex justify-content-center align-items-stretch">
+          <div class="row w-100" style="border: 2px solid lightgray; padding: 20px 10px; margin-right: 20px;">
+              <div class="col-sm-5 d-flex justify-content-center align-items-center">
+                  <img src="{% static 'Resources/Family-design.jpg' %}" alt="Family" style="width: 100%; height: auto; object-fit: cover;">
+              </div>
+              <div class="col-sm-7 d-flex flex-column">
+                  <h6 class="text-center">Thư viện Family thiết kế</h6>
+                  <p>Thư viện family thiết kế gồm các family do các KTS và đơn vị VLXD uy tín chia sẻ.
+                      Hãy đăng ký và trở thành thành viên EOB để tải các family miễn phí cho các bản vẽ công trình.</p>
+                  <div class="mt-auto text-end">
+                      <span><b>Xem thêm <i class="bi bi-chevron-right"></i></b></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Tấm hình thứ 2 -->
+      <div class="col d-flex justify-content-center align-items-stretch">
+          <div class="row w-100" style="border: 2px solid lightgray; padding: 20px 10px; margin-right: 20px;">
+              <div class="col-sm-5 d-flex justify-content-center align-items-center">
+                  <img src="{% static 'Resources/Activity-topic.jpg' %}" alt="AT" style="width: 100%; height: auto; object-fit: cover;">
+              </div>
+              <div class="col-sm-7 d-flex flex-column">
+                  <h6 class="text-center">Hoạt động chuyên đề</h6>
+                  <p>Các hoạt động chuyên đề phong phú như hội thảo, coffee talk, luncheon, lunch box với các chủ đề hấp dẫn và diễn giả đầu ngành.
+                      Hãy theo dõi và tham gia các hoạt động giành cho các thành viên EOB.</p>
+                  <div class="mt-auto text-end">
+                      <span><b>Xem thêm <i class="bi bi-chevron-right"></i></b></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="row" style="padding-bottom: 30px;">
+      <!-- Tấm hình thứ 3 -->
+      <div class="col d-flex justify-content-center align-items-stretch">
+          <div class="row w-100" style="border: 2px solid lightgray; padding: 20px 10px; margin-right: 20px;">
+              <div class="col-sm-5 d-flex justify-content-center align-items-center">
+                  <img src="{% static 'Resources/Post-topic.jpg' %}" alt="PT" style="width: 100%; height: auto; object-fit: cover;">
+              </div>
+              <div class="col-sm-7 d-flex flex-column">
+                  <h6 class="text-center">Bài viết chuyên đề</h6>
+                  <p>Tập hợp các bài viết kiến trúc xây dựng của các thành viên EOB pro, các diễn giả đầu ngành và các giải pháp VLXD uy tính.
+                      Hãy theo dõi để không bỏ lỡ các bài viết bổ ích.</p>
+                  <div class="mt-auto text-end">
+                      <span><b>Xem thêm <i class="bi bi-chevron-right"></i></b></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Tấm hình thứ 4 -->
+      <div class="col d-flex justify-content-center align-items-stretch">
+          <div class="row w-100" style="border: 2px solid lightgray; padding: 20px 10px; margin-right: 20px;">
+              <div class="col-sm-5 d-flex justify-content-center align-items-center">
+                  <img src="{% static 'Resources/Course-topic.jpg' %}" alt="CT" style="width: 100%; height: auto; object-fit: cover;">
+              </div>
+              <div class="col-sm-7 d-flex flex-column">
+                  <h6 class="text-center">Khoá học thiết kế chuyên đề</h6>
+                  <p>Các khoá học thiết kế phong phú được chia sẻ bởi các chuyên gia đầu ngành.
+                      Theo dõi để tham gia các khóa học phù hợp.</p>
+                  <div class="mt-auto text-end">
+                      <span><b>Xem thêm <i class="bi bi-chevron-right"></i></b></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Thông số thành viên, đơn vị... -->
+
+<div class="res_post row text-dark text-center" style="padding-left: 100px; padding-right:100px; padding-top:100px; padding-bottom:50px">
+  <div class="col-sm-3 p-2">
+      <img src="{% static 'Resources/Member.png' %}" alt="Member" width="100" height="60">
+      <p>Thành viên</p>
+      <h1 style="font-size:60px"><b>1446</b></h1>
+  </div>
+
+  <div class="col-sm-3 p-2">
+      <img src="{% static 'Resources/Unit.png' %}" alt="Unit" width="100" height="60">
+      <p>Đơn vị VLXD</p>
+      <h1 style="font-size:60px"><b>3</b></h1>
+  </div>
+
+  <div class="col-sm-3 p-2">
+      <img src="{% static 'Resources/Family.png' %}" alt="Family" width="100" height="60">
+      <p>Family</p>
+      <h1 style="font-size:60px"><b>198</b></h1>
+  </div>
+
+  <div class="col-sm-3 p-2">
+      <img src="{% static 'Resources/Document.png' %}" alt="Document" width="100" height="60">
+      <p>Tài liệu</p>
+      <h1 style="font-size:60px"><b>198</b></h1>
+  </div>
+</div>
+
+<!-- Background -->
+<div class="container-fluid text-black d-flex flex-column justify-content-end" style="background-image: url({% static 'Resources/Background.jpg' %}); background-size: cover; opacity: 0.8; width: 100%; height: 100vh; z-index: 1;">
+  <div class="row justify-content-center align-items-center" style="z-index: 2; text-align: center;">
+      <h4><b>Công trình tiêu biểu</b></h4>
+  </div>
+
+  <div class="row justify-content-center align-items-center" style="z-index: 2;">
+      <form class="col-sm-4 p-2">
+          <input class="form-control" type="text" placeholder="Tìm kiếm" style="border-radius: 25px; border: 2px solid lightgray;">
+      </form>
+
+      <div class="col-sm-2 p-2 dropdown">
+          <button id="dropdownButton" type="button" class="btn dropdown-toggle bg-white text-dark" 
+                  style="text-decoration: none; border-radius: 25px; border: 2px solid lightgray;" 
+                  data-bs-toggle="dropdown">
+              <b>Tất Cả NCC</b>
+          </button>
+
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('Tất Cả NCC')">Tất cả NCC</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('AN CƯỜNG')">AN CƯỜNG</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('DULUX')">DULUX</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('BM WINDOWS')">BM WINDOWS</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('INAX')">INAX</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('LYSAGHT')">LYSAGHT</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('EUROTILE')">EUROTILE</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('SAINT-GOBAIN')">SAINT-GOBAIN</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('PANASONIC')">PANASONIC</a></li>
+              <li><a class="dropdown-item" href="#ncc" onclick="changeButtonText('SCG')">SCG</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<!-- Tin tức -->
+<div class="res_new container-fluid align-items-center" style="padding-left: 200px; padding-right: 100px; padding-top: 75px;">
+  <div class="row d-flex justify-content-center align-items-stretch" style="padding-bottom: 50px;">
+      <div class="row">
+          <h5><b>Tin tức cập nhật</b></h5>
+      </div>
+      <!-- Tin tức đầu tiên -->
+      <div class="col d-flex flex-column" style="border: 1px solid lightgray; width: 300px; padding-bottom: 30px; margin-right: 40px;">
+          <div>
+              <img src="{% static 'Resources/Festival.jpg' %}" alt="Fes" style="width: 105%; height: auto;">
+          </div>
+          <h6 class="text-left" style="padding-bottom: 20px;">FESTIVAL KTS TRẺ TOÀN QUỐC LẦN THỨ IX - YÊN BÁI 2023</h6>
+          <p class="text-justify flex-grow-1">Kỳ liên hoan sắc màu !!! <br> Vượt qua bao gian khó, bao áp lực... ngày trở về trọn niềm vui. Đi xin từng tấm hình cùng với anh em, bởi nhớ lắm từng nục cười giữa anh em.</p>
+          <div class="mt-auto pt-3 text-right">
+              <span style="float: right;"><b>Xem thêm <i class="bi bi-chevron-right"></i> </b></span>
+          </div>
+      </div>
+      <!-- Tin tức thứ 2 -->
+      <div class="col d-flex flex-column" style="border: 1px solid lightgray; width: 300px; padding-bottom: 30px; margin-right: 40px;">
+          <div>
+              <img src="{% static 'Resources/Color.jpg' %}" alt="Color" style="width: 105%; height: auto;">
+          </div>
+          <h6 class="text-left" style="padding-bottom: 20px;">Dulux kỷ niệm 20 năm ColourFutures - Màu Dulux Của Năm</h6>
+          <p class="text-justify flex-grow-1">Năm 2023 đánh dấu một mốc quan trọng - kỷ niệm 20 năm chiến dịch Màu Dulux Của Năm. Tìm nguồn cảm hứng từ những câu chuyện mà sắc trong một ấn phẩm ColourFutures đặc biệt, và khám phá tất cả những màu sắc ra mắt trong hai thập kỷ qua. Hãy để màu sắc biến đổi cuộc sống của bạn.</p>
+          <div class="mt-auto pt-3 text-right">
+              <span style="float: right;"><b>Xem thêm <i class="bi bi-chevron-right"></i> </b></span>
+          </div>
+      </div>
+      <!-- Tin tức thứ 3 -->
+      <div class="col d-flex flex-column" style="border: 1px solid lightgray; width: 300px; padding-bottom: 30px; margin-right: 40px;">
+          <div>
+              <img src="{% static 'Resources/Top10.jpg' %}" alt="Top10" style="width: 105%; height: auto;">
+          </div>
+          <h6 class="text-left" style="padding-bottom: 20px;">LỘ DIỆN TOP 10 CHUNG KẾT AN CƯỜNG INTERIOR DESIGN AWARD 2023</h6>
+          <p class="text-justify flex-grow-1">Kỳ liên hoan sắc màu !!! <br> Ngày 17 tháng 10 vừa qua, tại Sheraton Hotel, An Cường interior Design Award 2023 đã cùng Hội đồng Giám khảo tiến hành chọn ra Top 10 dự án xuất sắc nhất trong 21 dự án vào Bán kết được công bố vào ngày 6 thánh 9 vừa qua.</p>
+          <div class="mt-auto pt-3 text-right">
+              <span style="float: right;"><b>Xem thêm <i class="bi bi-chevron-right"></i> </b></span>
+          </div>
+      </div>
+      <!-- Tin tức thứ 4 -->
+      <div class="col d-flex flex-column" style="border: 1px solid lightgray; width: 300px; padding-bottom: 30px; margin-right: 40px;">
+          <div>
+              <img src="{% static 'Resources/Areus.jpg' %}" alt="Areus" style="width: 105%; height: auto;">
+          </div>
+          <h6 class="text-left" style="padding-bottom: 20px;">AREUS Atelier đối thoại với văn hóa bằng nội thất CHẤM</h6>
+          <p class="text-justify flex-grow-1">Là một sản phẩm nội thất của hãng nội thất cao cấp Areus Atelier. Từ những đặc trưng của văn hóa dân gian Việt Nam, Areus mong muốn mỗi sản phẩm của mình sẽ là một cuộc trò chuyện với văn hóa dân gian, giúp tạo ra một không gian sống giàu cảm xúc...</p>
+          <div class="mt-auto pt-3 text-right">
+              <span style="float: right;"><b>Xem thêm <i class="bi bi-chevron-right"></i> </b></span>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+{%endblock main-content%}

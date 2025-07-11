@@ -1,0 +1,82 @@
+{% load static %}
+
+{% block main-content %}
+  <!-- Navigation -->
+  <nav class="sticky-nav" style="border: 1px solid black;">
+    <div class="row bg-dark text-white align-items-center" style="font-size: 13px; padding-left: 30px; padding-right: 30px;">
+      <div class="res_remove col-6 d-flex align-items-center" style="text-align: left">
+        <div class="res_remove col-sm-3 p-1">
+          <a href="/EOB" style="color:white;">Công trình tiêu biểu</a>
+        </div>
+        <div class="res_remove col-sm-1 p-1">
+          <a href="/EOB" style="color:white;">Tin Tức</a>
+        </div>
+      </div>
+      <div class="black_nav col-6 d-flex justify-content-end align-items-center" style="text-align: right">
+        {% if user.is_authenticated %}
+          <!-- Post-login -->
+          <div class="row col-12 d-flex justify-content-end align-items-center">
+            <div class="dropdown col-sm-3 p-2 text-center" style="margin-right:10px;">
+              <button class="btn dropdown-toggle custom_hover" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style="color: white; border: none;">
+                <b>{{ user.username }}</b>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="/EOB/Profile">Thông tin tài khoản</a></li>
+                <li><a class="dropdown-item" href="/EOB/Logout">Đăng xuất</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-2 p-2 dropdown">
+              <button type="button" class="btn dropdown-toggle bg-dark text-white w-100">
+                <img class="img-fluid" src="{% static 'Resources/Vie.png' %}" alt="Viet flag"> Vi
+              </button>
+            </div>
+          </div>
+        {% else %}
+          <!-- Pre-login -->
+          <div class="col-sm-3 p-1">
+            <a href="/EOB/Member" style="color:white;">Đăng Ký Thành Viên</a>
+          </div>
+          <div class="col-sm-2 p-1">
+            <a href="/EOB/VLXD" style="color:white;">VLXD Đăng Ký</a>
+          </div>
+          <div class="col-sm-2 p-1">
+            <a href="/EOB/Login" style="color:white;">Đăng Nhập</a>
+          </div>
+          <div class="col-sm-2 p-1 dropdown">
+            <button type="button" class="btn dropdown-toggle bg-dark text-white w-100">
+              <img class="img-fluid" src="{% static 'Resources/Vie.png' %}" alt="Viet flag"> Vi
+            </button>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row bg-white text-dark align-items-center" style="display: flex; justify-content: space-between;">
+      <div class="white_nav col-sm-1 p-3" style="margin-left:20px;">
+        <a href="/EOB/">
+          <img src="{% static 'Resources/Logo.png' %}" alt="Logo" width="120" height="60">
+        </a>
+      </div>
+
+      <div class="lib_model res_remove col-sm-2 p-4 dropdown" style="text-align: right">
+        <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <b>THƯ VIỆN MODEL</b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/EOB/Library">Tất cả thư viện</a></li>
+          <li><a class="dropdown-item" href="/EOB/Folder">Thư viện EOB</a></li>
+          <li><a class="dropdown-item" href="#">Thư viện VLXD</a></li>
+        </ul>
+      </div>
+
+      <form class="white_nav col-sm-3 p-4" style="margin-left: auto;">
+        <div class="input-group">
+          <input class="form-control" type="text" placeholder="Tìm kiếm" style="border-radius: 25px 0 0 25px; border: 2px solid lightgray;">
+          <span class="input-group-text" style="border-radius: 0 25px 25px 0; border: 2px solid lightgray;">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+      </form>
+    </div>
+  </nav>
+{% endblock main-content %}
