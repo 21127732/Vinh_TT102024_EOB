@@ -33,7 +33,7 @@ SECRET_KEY = "django-insecure-!53c)t&$yu79@#poqtg7k8%o3v1*rp4kt578oer9+f1oy-0!9*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 AUTH_USER_MODEL = 'EOB.Member'
